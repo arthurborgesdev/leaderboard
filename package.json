@@ -24,8 +24,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack production",
-    "start": "webpack serve --open development" 
+    "build": "webpack --mode production",
+    "start": "webpack serve --open --mode development" 
   },
   "repository": {
     "type": "git",

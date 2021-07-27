@@ -1,3 +1,35 @@
 import './style.css';
+import { showScores } from './scoresDisplay.js'
 
-const scoresDisplay = document.querySelector('scores-display');
+const entries = [
+  {
+    name: "Name",
+    score: 1000
+  },
+  {
+    name: "Name",
+    score: 1000
+  },
+  {
+    name: "Name",
+    score: 1000
+  },
+  {
+    name: "Name",
+    score: 1000
+  },
+  {
+    name: "Name",
+    score: 1000
+  },
+  {
+    name: "Name",
+    score: 1000
+  },
+  {
+    name: "Name",
+    score: 1000
+  }
+];
+
+document.addEventListener('DOMContentLoaded', () => showScores(entries));
