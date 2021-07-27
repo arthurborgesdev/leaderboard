@@ -8,13 +8,21 @@
 </head>
 <body>
   <h1>Leaderboard</h1>
-  <section>
-    <article>
-      <h2>Recent scores</h2>
-      <button>Refresh</button>
+  <section class="container">
+    <article class="recent-scores">
+      <div class="refresh-scores">
+        <h2>Recent scores</h2>
+        <button class="refresh-button">Refresh</button>
+      </div>
+      <div class="display-scores"></div>
     </article>
-    <article>
+    <article class="add-scores">
       <h2>Add your score</h2>
+      <div class="input-score">
+        <input placeholder="Your name" />
+        <input placeholder="Your score" />
+      </div>
+      <input type="submit" value="Submit" />
     </article>
   </section>
   <script src="bundle.js"></script>

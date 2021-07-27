@@ -1,3 +1,27 @@
 h1 {
   color: blue;
 }
+
+.container {
+  display: flex;
+  margin: 20px 30px;
+}
+
+.recent-scores {
+  margin-right: 100px;
+}
+
+.refresh-scores {
+  display: flex;
+  justify-content: space-between;
+}
+
+.refresh-scores h2 {
+  margin: 0 50px 0 0;
+}
+
+.display-scores {
+  margin-top: 25px;
+  padding: 250px;
+  border: 1px solid black;
+}
