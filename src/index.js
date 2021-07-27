@@ -4,31 +4,31 @@ import { showScores } from './scoresDisplay.js'
 const entries = [
   {
     name: "Name",
-    score: 1000
+    score: 100
   },
   {
     name: "Name",
-    score: 1000
+    score: 20
   },
   {
     name: "Name",
-    score: 1000
+    score: 50
   },
   {
     name: "Name",
-    score: 1000
+    score: 78
   },
   {
     name: "Name",
-    score: 1000
+    score: 125
   },
   {
     name: "Name",
-    score: 1000
+    score: 77
   },
   {
     name: "Name",
-    score: 1000
+    score: 42
   }
 ];
 
