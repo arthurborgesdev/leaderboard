@@ -1,7 +1,9 @@
-export const showScores = (entries) => {
+const showScores = (entries) => {
   const scoresDisplay = document.getElementById('scores-display');
 
-  entries.forEach(entry => scoresDisplay.insertAdjacentHTML('beforeend',`
+  entries.forEach((entry) => scoresDisplay.insertAdjacentHTML('beforeend', `
     <div>${entry.name}: ${entry.score}</div>  
-  `))
-}
+  `));
+};
+
+export default showScores;
