@@ -15,7 +15,7 @@ const loadScores = async () => {
   usersData.result.forEach((entry) => scoresDisplay.insertAdjacentHTML('beforeend', `
     <div>${entry.user}: ${entry.score}</div>  
   `));
-}
+};
 
 refreshButton.addEventListener('click', loadScores);
 
@@ -38,7 +38,7 @@ userDataSubmit.addEventListener('click', async () => {
   }
 });
 
-document.addEventListener('DOMContentLoaded', () => { 
+document.addEventListener('DOMContentLoaded', () => {
   createGame(`Game created at: ${new Date()}`);
   loadScores();
 });
