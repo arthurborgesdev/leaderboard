@@ -6,8 +6,11 @@ const createGame = async (name) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-    }
-  })
+    },
+    body: JSON.stringify(`{name: ${name}`),
+  });
+
+  return await response.json();
 }
 
 
@@ -30,4 +33,4 @@ const getUsersData = async () => {
   return usersData;
 }
 
-export {createUserData, getUsersData }
+export {createGame, createUserData, getUsersData }

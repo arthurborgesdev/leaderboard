@@ -1,5 +1,6 @@
 import './style.css';
 import { createUserData, getUsersData } from './api.js';
+import { createGame } from './api';
 
 const refreshButton = document.getElementById('refresh-button');
 
@@ -35,3 +36,5 @@ userDataSubmit.addEventListener('click', async () => {
     userScore = "";
   }
 })
+
+document.addEventListener("DOMContentLoad", () => createGame(`Game created at: ${new Date()}`));
