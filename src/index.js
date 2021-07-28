@@ -1,5 +1,5 @@
 import './style.css';
-import { createGame, createUserData, getUsersData } from './api.js';
+import { createUserData, getUsersData } from './api.js';
 
 const refreshButton = document.getElementById('refresh-button');
 
@@ -13,6 +13,23 @@ refreshButton.addEventListener('click', () => {
   `));
 })
 
-const userName = document.getElementById
+const userDataSubmit = document.getElementById('user-data-submit');
+
+userDataSubmit.addEventListener('click', () => {
+  const userName = document.getElementById('user-name');
+  const userScore = document.getElementById('user-score');
+
+  if (userName !== "" && userScore !== "") {
+    const data = {
+      name: userName,
+      score: userScore
+    }
+    
+    createUserData(data);
+
+    userName.value = "";
+    userScore.value = "";
+  }
+})
 
 document.addEventListener('DOMContentLoaded', () => showScores(entries));
