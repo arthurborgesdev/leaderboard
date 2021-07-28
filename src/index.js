@@ -1,35 +1,18 @@
 import './style.css';
-import showScores from './scoresDisplay.js';
+import { createGame, createUserData, getUsersData } from './api.js';
 
-const entries = [
-  {
-    name: 'Name',
-    score: 100,
-  },
-  {
-    name: 'Name',
-    score: 20,
-  },
-  {
-    name: 'Name',
-    score: 50,
-  },
-  {
-    name: 'Name',
-    score: 78,
-  },
-  {
-    name: 'Name',
-    score: 125,
-  },
-  {
-    name: 'Name',
-    score: 77,
-  },
-  {
-    name: 'Name',
-    score: 42,
-  },
-];
+const refreshButton = document.getElementById('refresh-button');
+
+refreshButton.addEventListener('click', () => {
+  const scoresDisplay = document.getElementById('scores-display');
+
+  const usersData = getUsersData();
+
+  usersData.forEach((entry) => scoresDisplay.insertAdjacentHTML('beforeend', `
+    <div>${entry.name}: ${entry.score}</div>  
+  `));
+})
+
+const userName = document.getElementById
 
 document.addEventListener('DOMContentLoaded', () => showScores(entries));
