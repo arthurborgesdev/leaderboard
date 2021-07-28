@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# # leaderboard
+# Leaderboard
 
 > App written in JavaScript to submit scores, and to view scores of different players
 
@@ -17,11 +17,19 @@ The objective of this App is to submit scores and grab others from the list of o
 - Webpack
 - Ubuntu 20.04
 - Linters
+- Async/Await
+- API Knowledge
+- Babel
 
 ## Setup
 
 - Get the link of the repository 
 - Clone it as `git@github.com:arthurborgesdev/leaderboard.git`
+
+## Info
+
+- For this exercise, a previous game named "Matchmaking Stickman" was created in Insomnia
+- This process yielded the id of `xxluFQBeRwbN9ctGU2td` which was hardcoded in the code
 
 ## Usage
 
