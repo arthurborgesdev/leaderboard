@@ -3,7 +3,7 @@ import { createGame, createUserData, getUsersData } from './api.js';
 
 const refreshButton = document.getElementById('refresh-button');
 
-refreshButton.addEventListener('click', async () => {
+const loadScores = async () => {
   const scoresDisplay = document.getElementById('scores-display');
 
   while (scoresDisplay.firstChild) {
@@ -15,7 +15,9 @@ refreshButton.addEventListener('click', async () => {
   usersData.result.forEach((entry) => scoresDisplay.insertAdjacentHTML('beforeend', `
     <div>${entry.user}: ${entry.score}</div>  
   `));
-});
+}
+
+refreshButton.addEventListener('click', loadScores);
 
 const userDataSubmit = document.getElementById('user-data-submit');
 
@@ -36,4 +38,7 @@ userDataSubmit.addEventListener('click', async () => {
   }
 });
 
-document.addEventListener('DOMContentLoad', () => createGame(`Game created at: ${new Date()}`));
+document.addEventListener('DOMContentLoaded', () => { 
+  createGame(`Game created at: ${new Date()}`);
+  loadScores();
+});
