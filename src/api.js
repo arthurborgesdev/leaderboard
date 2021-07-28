@@ -1,15 +1,7 @@
-const showScores = (entries) => {
-  const scoresDisplay = document.getElementById('scores-display');
-
-  entries.forEach((entry) => scoresDisplay.insertAdjacentHTML('beforeend', `
-    <div>${entry.name}: ${entry.score}</div>  
-  `));
-};
-
 const apiBaseUrl = "https://us-central1-js-capstone-backend.cloudfunctions.net/api/";
 const gameId = "xxluFQBeRwbN9ctGU2td";
 
-async function createUserData = (data) => {
+const createUserData = async (data) => {
   const response = await fetch(apiBaseUrl + gameId + "/scores/", {
     method: "POST",
     mode: "cors",
@@ -26,13 +18,10 @@ async function createUserData = (data) => {
   return response.json();
 }
 
-async function getUsersData = () => {
+const getUsersData = async () => {
   const usersData = await fetch(apiBaseUrl + gameId + "/scores/")
   
   return JSON.parse(usersData);
 }
 
-exports.module = {
-  createUserData: createUserData,
-  getUsersData: getUsersData,
-};
+export {createUserData, getUsersData }

@@ -31,5 +31,3 @@ userDataSubmit.addEventListener('click', () => {
     userScore.value = "";
   }
 })
-
-document.addEventListener('DOMContentLoaded', () => showScores(entries));
