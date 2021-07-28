@@ -9,7 +9,7 @@ const showScores = (entries) => {
 const apiBaseUrl = "https://us-central1-js-capstone-backend.cloudfunctions.net/api/";
 const gameId = "xxluFQBeRwbN9ctGU2td";
 
-async const createUserData = (data) => {
+async function createUserData = (data) => {
   const response = await fetch(apiBaseUrl + gameId + "/scores/", {
     method: "POST",
     mode: "cors",
@@ -26,7 +26,7 @@ async const createUserData = (data) => {
   return response.json();
 }
 
-async const getUsersData = () => {
+async function getUsersData = () => {
   const usersData = await fetch(apiBaseUrl + gameId + "/scores/")
   
   return JSON.parse(usersData);
