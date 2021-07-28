@@ -1,17 +1,22 @@
 const apiBaseUrl = "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/";
 const gameId = "xxluFQBeRwbN9ctGU2td";
 
+const createGame = async (name) => {
+  const response = await fetch(apiBaseUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+}
+
+
 const createUserData = async (data) => {
   const response = await fetch(apiBaseUrl + gameId + "/scores/", {
     method: "POST",
-    mode: "cors",
-    cache: "no-cache",
-    credentials: "same-origin",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
-    redirect: 'follow',
-    referrerPolicy: 'no-referrer',
     body: JSON.stringify(data)
   });
 

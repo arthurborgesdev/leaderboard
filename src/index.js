@@ -12,8 +12,6 @@ refreshButton.addEventListener('click', async () => {
 
   const usersData = await getUsersData();
 
-  console.log(usersData.result);
-
   usersData.result.forEach((entry) => scoresDisplay.insertAdjacentHTML('beforeend', `
     <div>${entry.user}: ${entry.score}</div>  
   `));
@@ -21,19 +19,19 @@ refreshButton.addEventListener('click', async () => {
 
 const userDataSubmit = document.getElementById('user-data-submit');
 
-userDataSubmit.addEventListener('click', () => {
-  const userName = document.getElementById('user-name');
-  const userScore = document.getElementById('user-score');
+userDataSubmit.addEventListener('click', async () => {
+  let userName = document.getElementById('user-name').value;
+  let userScore = document.getElementById('user-score').value;
 
   if (userName !== "" && userScore !== "") {
     const data = {
-      name: userName,
+      user: userName,
       score: userScore
     }
     
-    createUserData(data);
+    await createUserData(data);
 
-    userName.value = "";
-    userScore.value = "";
+    userName = "";
+    userScore = "";
   }
 })
