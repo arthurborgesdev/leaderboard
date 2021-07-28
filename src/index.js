@@ -6,12 +6,16 @@ const refreshButton = document.getElementById('refresh-button');
 refreshButton.addEventListener('click', async () => {
   const scoresDisplay = document.getElementById('scores-display');
 
-  scoresDisplay.innerHtml = "";
+  while(scoresDisplay.firstChild) {
+    scoresDisplay.removeChild(scoresDisplay.firstChild);
+  }
 
   const usersData = await getUsersData();
 
+  console.log(usersData.result);
+
   usersData.result.forEach((entry) => scoresDisplay.insertAdjacentHTML('beforeend', `
-    <div>${entry.name}: ${entry.score}</div>  
+    <div>${entry.user}: ${entry.score}</div>  
   `));
 })
 
