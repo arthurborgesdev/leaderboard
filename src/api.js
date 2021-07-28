@@ -1,4 +1,4 @@
-const apiBaseUrl = "https://us-central1-js-capstone-backend.cloudfunctions.net/api/";
+const apiBaseUrl = "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/";
 const gameId = "xxluFQBeRwbN9ctGU2td";
 
 const createUserData = async (data) => {
@@ -15,13 +15,14 @@ const createUserData = async (data) => {
     body: JSON.stringify(data)
   });
 
-  return response.json();
+  return await response.json();
 }
 
 const getUsersData = async () => {
-  const usersData = await fetch(apiBaseUrl + gameId + "/scores/")
+  const response = await fetch(apiBaseUrl + gameId + "/scores/")
   
-  return JSON.parse(usersData);
+  const usersData = await response.json();
+  return usersData;
 }
 
 export {createUserData, getUsersData }

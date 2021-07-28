@@ -3,12 +3,14 @@ import { createUserData, getUsersData } from './api.js';
 
 const refreshButton = document.getElementById('refresh-button');
 
-refreshButton.addEventListener('click', () => {
+refreshButton.addEventListener('click', async () => {
   const scoresDisplay = document.getElementById('scores-display');
 
-  const usersData = getUsersData();
+  scoresDisplay.innerHtml = "";
 
-  usersData.forEach((entry) => scoresDisplay.insertAdjacentHTML('beforeend', `
+  const usersData = await getUsersData();
+
+  usersData.result.forEach((entry) => scoresDisplay.insertAdjacentHTML('beforeend', `
     <div>${entry.name}: ${entry.score}</div>  
   `));
 })
