@@ -36,6 +36,7 @@ userDataSubmit.addEventListener('click', async () => {
     userName = '';
     userScore = '';
   }
+  loadScores();
 });
 
 document.addEventListener('DOMContentLoaded', () => {
