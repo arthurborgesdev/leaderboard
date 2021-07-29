@@ -31,6 +31,61 @@ The objective of this App is to submit scores and grab others from the list of o
 - For this exercise, a previous game named "Matchmaking Stickman" was created in Insomnia
 - This process yielded the id of `xxluFQBeRwbN9ctGU2td` which was hardcoded in the code
 
+## API Information
+
+- This application uses the [Leaderboard API service](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3) provided by Microverse
+
+- The base URL is `https://us-central1-js-capstone-backend.cloudfunctions.net/api/`
+
+- It has basically 2 endpoints, `/games/` (to create games) and `/games/:id/scores/` (To create and get scores)
+
+- To create a game, send a POST action to the base URL + `/games/` with the name of the game:
+
+```
+{
+  "name": "This is the name of the new game" 
+}
+```
+
+- The result will be something like: 
+``` 
+{
+	"result": "Game with ID: Zl4d7IVkemOTTVg2fUdz added."
+}
+``` 
+
+- To create a new score, send a POST action to the base URL + `/games/:id/scores/` (where id is the previous id of the created game) and the score and user name:
+
+```
+{
+  "user": "Arthur"
+  "score": 42 
+}
+```
+
+- To get a list of all scores for a specific game, send a GET action to the base URL + `/games/:id/scores/`:
+
+- The response will be something like:
+
+```
+{
+  "result": [
+    {
+      "user": "John Doe",
+      "score": 42
+    },
+    {
+      "user": "Peter Parker",
+      "score": 35
+    },
+    {
+      "user": "Wonder Woman",
+      "score": 50
+    }
+  ]
+}
+``` 
+
 ## Usage
 
 - Run `npm install` on a Terminal to install the modules
