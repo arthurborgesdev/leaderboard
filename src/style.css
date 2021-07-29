@@ -1,6 +1,19 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 15px;
+  background-color: blueviolet;
+  color: white;
+}
+
 .container {
   display: flex;
-  margin: 20px 30px;
+  margin: 0;
+  background-color: palevioletred;
+  padding: 15px;
 }
 
 .recent-scores {
@@ -10,6 +23,19 @@
 .refresh-scores {
   display: flex;
   justify-content: space-between;
+}
+
+h2 {
+  color: white;
+}
+
+input[type="submit"] {
+  background-color: blueviolet;
+  padding: 10px;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  border: white;
 }
 
 .refresh-scores h2 {
@@ -25,8 +51,17 @@
   padding: 5px;
 }
 
+#scores-display div:nth-of-type(2n + 1) {
+  background-color: white;
+  font-size: large;
+  font-weight: bold;
+}
+
 #scores-display div:nth-of-type(2n) {
-  background-color: lightgray;
+  background-color: blueviolet;
+  color: white;
+  font-size: large;
+  font-weight: bold;
 }
 
 .add-scores h2 {
@@ -50,6 +85,10 @@
 
 .input-scores input[type="submit"] {
   margin-top: 20px;
-  width: 25%;
+  width: 100px;
+  height: 50px;
   align-self: flex-end;
+  color: white;
+  font-size: large;
+  font-weight: bold;
 }
