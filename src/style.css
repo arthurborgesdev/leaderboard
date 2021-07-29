@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 15px;
+  background-color: blueviolet;
+  color: white;
+}
+
+.container {
+  display: flex;
+  margin: 0;
+  background-color: palevioletred;
+  padding: 15px;
+}
+
+.recent-scores {
+  margin-right: 100px;
+}
+
+.refresh-scores {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  color: white;
+}
+
+input[type="submit"] {
+  background-color: blueviolet;
+  padding: 10px;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  border: white;
+}
+
+.refresh-scores h2 {
+  margin: 0 50px 0 0;
+}
+
+#scores-display {
+  margin-top: 25px;
+  border: 1px solid black;
+}
+
+#scores-display div {
+  padding: 5px;
+}
+
+#scores-display div:nth-of-type(2n + 1) {
+  background-color: white;
+  font-size: large;
+  font-weight: bold;
+}
+
+#scores-display div:nth-of-type(2n) {
+  background-color: blueviolet;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
+
+.add-scores h2 {
+  margin: 0 0 25px 0;
+}
+
+.input-scores {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-scores input {
+  width: 250px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.input-scores input:nth-of-type(2) {
+  margin-top: 20px;
+}
+
+.input-scores input[type="submit"] {
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+  align-self: flex-end;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
